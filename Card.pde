@@ -72,10 +72,10 @@ public class Card extends Updateable
     fallingSpeed += GRAVITY;
     
     //if the card is at the bottom of the screen
-    if(!fallThroughFloor && yPos >= SCREEN_SIZE_Y - ySize)
+    if(!fallThroughFloor && yPos >= pixelHeight - ySize)
     {
       //make sure the card doesn't go under the bottom of the screen
-      yPos = SCREEN_SIZE_Y - ySize;
+      yPos = pixelHeight - ySize;
      
       //slow down and flip the falling speed
       fallingSpeed -= bounceFriction;
@@ -93,7 +93,7 @@ public class Card extends Updateable
     }
     
     //destory the card if it is out of bounds
-    if(xPos > SCREEN_SIZE_X || xPos < 0 - xSize || yPos > SCREEN_SIZE_Y)
+    if(xPos > pixelWidth || xPos < 0 - xSize || yPos > pixelHeight)
     {
       Destroy();
     }

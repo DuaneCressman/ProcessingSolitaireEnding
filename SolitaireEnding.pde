@@ -1,12 +1,9 @@
-  
 
-public int SCREEN_SIZE_X = 1500;
-public int SCREEN_SIZE_Y = 750;
 
 //called before the first frame
 void settings() {
-  size(SCREEN_SIZE_X, SCREEN_SIZE_Y);
-}
+    fullScreen();
+ }
 
 //called once every frame
 void draw(){
